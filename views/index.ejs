@@ -7,5 +7,13 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <button type='button'><a href='/new'>New Post</a></button>
+    <% messages.forEach((message) => { %> 
+      <div style='margin: 10px 0px; background-color: lightgray; padding: 10px; border-radius: 5px;'>
+        <h2><%= message.text %></h2>
+        <p><%= message.user %></p>
+        <p><%= message.added %></p>
+      </div>
+    <% }); %>
   </body>
 </html>
